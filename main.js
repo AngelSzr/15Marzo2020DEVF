@@ -178,9 +178,9 @@ let pokemons =
         'kingler',
         'voltorb']
 let numero = parseInt(prompt("Elige un número"));
-for (let i = 1; i <= numero; i++) {
-    if (i % 5 == 0) {
-        console.log(pokemons[i - 1])
+for (let i = 1; i <= numero; i++) { //Ir contando desde 1 en 1 hasta el número, pero si pongo 0 me arrojará a bulbasaur que en posición es 0 cumpliendo que si es múltiplo de 0, pero en longitud es 1 que no es multiplo de 5, por lo que lo ignoré. 
+    if (i % 5 == 0) { //aquí hace lo de múltiplo de 5
+        console.log(pokemons[i - 1]) //y aquí le resto 1 porque como en posición considera el número 0, le estoy quitando eso. Por ejemplo si yo pongo 100 me tendría que arrojar a voltorb que es el último y como es el 100mo pokémon entonces si es múltiplo de 5, pero me arrojará un error porque no hay una posición 100, sino que hay hasta la 99a posición, espero que si se entienda ):
     }
 }
 //Crea un programa que recorra el arreglo [4,”dos”,8,”tres”,5,9,1,”cero”] y muestre en consola solo los elementos que son tipo número.
